@@ -1,0 +1,32 @@
+.mdme__navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 4rem;
+}
+
+.mdme__navbar-logo {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mdme__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mdme__navbar-links a {
+  font-family: var(--font-family);
+}
+
+.mdme__navbar-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}

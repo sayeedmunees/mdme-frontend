@@ -4,12 +4,9 @@
   --font-family: "Manrope", sans-serif;
   --font-family-cursive: "Birthstone", cursive;
 
-  --gradient-text: linear-gradient(89.97deg, #cacaca 1.84%, #212121 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #b6b6b6 -13.86%, #1f1f1f 99.55%);
-
   --color-bg: #ffffff;
-  --color-footer: #242424;
+  --color-footer: #000000;
   --color-logo: rgb(0, 81, 255);
   --color-text: #000000;
-  --color-subtext: #3d3d3d;
+  --color-subtext: #979797;
 }

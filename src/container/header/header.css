@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   height: 80vh;
+  padding: 2rem;
 }
 
 .mdme__header-heading {
@@ -12,7 +12,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
 }
 
@@ -38,7 +37,6 @@
 .mdme__header-heading h2 {
   font-family: var(--font-family-cursive);
   font-size: 2.5rem;
-
   margin: 1rem 0;
 }
 
@@ -69,14 +67,124 @@
   background: #000;
   border: none;
   border-radius: 50px;
-
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 
 .mdme__header-content button:hover {
   transform: scale(1.01);
-  box-shadow: 5px 8px 33px 0px rgba(0,0,0,0.45);
--webkit-box-shadow: 5px 8px 33px 0px rgba(0,0,0,0.45);
--moz-box-shadow: 5px 8px 33px 0px rgba(0,0,0,0.45);
-transition: 0.3s ease;
+  box-shadow: 5px 8px 33px 0px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 5px 8px 33px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 5px 8px 33px 0px rgba(0, 0, 0, 0.45);
+  transition: 0.3s ease;
+}
+
+/* Tablet styles */
+@media screen and (max-width: 1024px) {
+  .mdme__header {
+    height: 85vh;
+    padding: 1.5rem;
+  }
+
+  .mdme__header-heading h4 {
+    font-size: 1.3rem;
+  }
+
+  .mdme__header-heading h1 {
+    font-size: 2.5rem;
+    line-height: 48px;
+  }
+
+  .mdme__header-heading h1 span {
+    font-size: 5.5rem;
+  }
+
+  .mdme__header-heading h2 {
+    font-size: 2.2rem;
+  }
+
+  .mdme__header-content p {
+    font-size: 0.95rem;
+    max-width: 600px;
+  }
+
+  .mdme__header-content button {
+    font-size: 0.95rem;
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .mdme__header {
+    height: 50vh;
+    padding: 1rem;
+  }
+
+  .mdme__header-heading h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mdme__header-heading h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+
+  .mdme__header-heading h1 span {
+    font-size: 4rem;
+  }
+
+  .mdme__header-heading h2 {
+    font-size: 1.8rem;
+    margin: 0.8rem 0;
+  }
+
+  .mdme__header-content p {
+    font-size: 0.9rem;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
+  .mdme__header-content button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+/* Small mobile styles */
+@media screen and (max-width: 480px) {
+  .mdme__header {
+    padding: 0.8rem;
+  }
+
+  .mdme__header-heading h4 {
+    font-size: 1.1rem;
+  }
+
+  .mdme__header-heading h1 {
+    font-size: 1.8rem;
+    line-height: 36px;
+  }
+
+  .mdme__header-heading h1 span {
+    font-size: 3.2rem;
+  }
+
+  .mdme__header-heading h2 {
+    font-size: 1.5rem;
+    margin: 0.6rem 0;
+  }
+
+  .mdme__header-content p {
+    font-size: 0.85rem;
+    max-width: 95%;
+    padding: 0 0.5rem;
+    margin: 0.8rem 0;
+  }
+
+  .mdme__header-content button {
+    font-size: 0.85rem;
+    padding: 0.75rem 1.5rem;
+  }
 }

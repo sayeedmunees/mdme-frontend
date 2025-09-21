@@ -1,6 +1,6 @@
 import React from "react";
 import "./history.css";
-import Navbar from "../../components/navbar/Navbar";
+import HistoryNavbar from "../../components/historyNavbar/HistoryNavbar";
 import { useState, useEffect } from "react";
 
 const History = () => {
@@ -49,7 +49,7 @@ const History = () => {
 
   return (
     <>
-      <Navbar />
+      <HistoryNavbar />
       <div className="history-page">
         <div className="history-header">
           <h1>Document History</h1>

@@ -1,6 +1,6 @@
 import React from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import "./navbar.css";
+import "./historyNavbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -13,15 +13,12 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="mdme__navbar-links">
-          <a href="#">Home</a>
-          <a href="#features">Features</a>
+          <Link to={"/"}>
+            <a href="#">Home</a>
+          </Link>
           <Link to={"/editor"}>
             <a href="#editor">Editor</a>
           </Link>
-          <Link to={"/history"}>
-            <a>History</a>
-          </Link>
-          <a href="#knowmore">Know More</a>
         </div>
       </div>
     </div>
