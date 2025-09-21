@@ -1,0 +1,47 @@
+.mdme__editAndPreview {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+.mdme__editAndPreview-content {
+  display: flex;
+  flex: 1;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.mdme__editAndPreview-editor,
+.mdme__editAndPreview-preview {
+  flex: 1;
+  background: white;
+  margin: 0 10px 10px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mdme__editAndPreview-preview {
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .mdme__editAndPreview-content {
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .mdme__editAndPreview-editor,
+  .mdme__editAndPreview-preview {
+    margin: 0 10px 10px 10px;
+  }
+
+  .mdme__editAndPreview-preview {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+}

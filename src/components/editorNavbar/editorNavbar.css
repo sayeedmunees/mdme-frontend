@@ -1,0 +1,84 @@
+.editor-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 10px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-actions a{
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+.navbar-actions a:hover{
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.navbar-btn {
+  padding: 8px 16px;
+  background: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  color: white;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-btn:hover:not(:disabled) {
+  background: #333;
+  border-color: #333;
+}
+
+.navbar-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: #6c6c6c;
+  font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+  .editor-navbar {
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 12px 16px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .navbar-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

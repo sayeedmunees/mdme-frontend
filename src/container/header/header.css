@@ -1,0 +1,82 @@
+.mdme__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 80vh;
+}
+
+.mdme__header-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.mdme__header-heading h4 {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+}
+
+.mdme__header-heading h1 {
+  font-family: var(--font-family);
+  font-size: 3rem;
+  line-height: 56px;
+}
+
+.mdme__header-heading h1 span {
+  font-family: var(--font-family-cursive);
+  color: var(--color-logo);
+  font-size: 7rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.mdme__header-heading h2 {
+  font-family: var(--font-family-cursive);
+  font-size: 2.5rem;
+
+  margin: 1rem 0;
+}
+
+.mdme__header-heading h2 span {
+  color: var(--color-logo);
+}
+
+.mdme__header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mdme__header-content p {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.mdme__header-content button {
+  width: fit-content;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #000;
+  border: none;
+  border-radius: 50px;
+
+  padding: 1rem 2rem;
+}
+
+.mdme__header-content button:hover {
+  transform: scale(1.01);
+  box-shadow: 5px 8px 33px 0px rgba(0,0,0,0.45);
+-webkit-box-shadow: 5px 8px 33px 0px rgba(0,0,0,0.45);
+-moz-box-shadow: 5px 8px 33px 0px rgba(0,0,0,0.45);
+transition: 0.3s ease;
+}

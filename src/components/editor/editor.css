@@ -1,0 +1,107 @@
+.mdme__editor {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mdme__editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.mdme__editor-header h3 {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #333;
+}
+
+.title-input {
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 14px;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.title-input::placeholder {
+  color: #999;
+}
+
+.title-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.mdme__editor-content {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Fix scrolling and make toolbar sticky */
+.mdme__editor-content .w-md-editor {
+  border: none !important;
+  border-radius: 0 !important;
+  height: 100% !important;
+}
+
+/* Sticky toolbar */
+.mdme__editor-content .w-md-editor-toolbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+  background: white !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Fix textarea scrolling */
+.mdme__editor-content .w-md-editor-text-textarea {
+  font-family: "Monaco", "Menlo", monospace !important;
+  font-size: 14px !important;
+  padding: 20px !important;
+  line-height: 1.6 !important;
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+/* Better scrollbar */
+.mdme__editor-content .w-md-editor-text-textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mdme__editor-content .w-md-editor-text-textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.mdme__editor-content .w-md-editor-text-textarea::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.mdme__editor-content
+  .w-md-editor-text-textarea::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+  .mdme__editor-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .title-input {
+    min-width: auto;
+    max-width: none;
+  }
+}
