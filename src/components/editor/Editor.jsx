@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import MarkdownEditor from "@uiw/react-markdown-editor";
 import "./editor.css";
 
-const Editor = ({ mdStr, setMdStr }) => {
-  const [title, setTitle] = useState("Untitled-Document");
+const Editor = ({ mdStr, setMdStr, title, setTitle }) => {
 
   return (
     <div className="mdme__editor">

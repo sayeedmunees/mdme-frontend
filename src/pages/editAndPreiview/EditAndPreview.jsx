@@ -16,13 +16,20 @@ Start typing here to see the live preview!
 
 **Happy writing!** ✨`);
 
+  const [title, setTitle] = useState("Untitled-Document");
+
   return (
     <div className="mdme__editAndPreview section__padding">
-      <EditorNavbar mdStr={mdStr} />
+      <EditorNavbar mdStr={mdStr} title={title} />
 
       <div className="mdme__editAndPreview-content">
         <div className="mdme__editAndPreview-editor">
-          <Editor mdStr={mdStr} setMdStr={setMdStr} />
+          <Editor
+            mdStr={mdStr}
+            setMdStr={setMdStr}
+            title={title}
+            setTitle={setTitle}
+          />
         </div>
         <div className="mdme__editAndPreview-preview">
           <Preview mdStr={mdStr} />

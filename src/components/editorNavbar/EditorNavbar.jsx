@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./editorNavbar.css";
 import { FaRegCopy } from "react-icons/fa";
 import { FiSave } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { addMarkdownAPI } from "../../services/allAPI";
 
-const EditorNavbar = ({ mdStr }) => {
+const EditorNavbar = ({ mdStr, title }) => {
   const [copyStatus, setCopyStatus] = useState("");
 
   const handleCopy = async () => {
@@ -18,23 +19,27 @@ const EditorNavbar = ({ mdStr }) => {
     }
   };
 
-  const handleSave = () => {
-    const currentDateTime = new Date(); // ✅ No import needed
-    const formattedDateTime = currentDateTime
-      .toISOString()
-      .replace(/T/, "_")
-      .replace(/:/g, "-")
-      .split(".")[0];
+  const handleSave = async () => {
+    const currentDate = new Date();
 
-    const blob = new Blob([mdStr], { type: "text/markdown" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `document_${formattedDateTime}.md`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    // console.log(title);
+    // console.log(currentDate);
+    // console.log(mdStr);
+
+    const mdData = {
+      title: title, // Use current title prop
+      date: currentDate,
+      mdData: mdStr, // Use current mdStr prop
+    };
+
+    // console.log("Saving mdData:", mdData);
+
+    try {
+      const result = await addMarkdownAPI(mdData); // Remove array wrapper
+      // console.log("Save result:", result);
+    } catch (err) {
+      console.log("Error", err);
+    }
   };
 
   return (
