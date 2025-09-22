@@ -16,8 +16,8 @@ export const deleteMarkdownAPI = async (id) => {
   return await commonAPI("delete", `${serverURL}/markdown/${id}`, "");
 };
 
-// 4. To get a specific markdown from server - GET (to editor)
-export const getAMarkdownAPI = async (id) => {
+// 4. To get a specific markdown from server - put (to editor)
+export const editMarkdownAPI = async (id) => {
   console.log(id);
-  return await commonAPI("get", `${serverURL}/markdown/${id}`, "");
+  return await commonAPI("put", `${serverURL}/markdown/${id}`, "");
 };

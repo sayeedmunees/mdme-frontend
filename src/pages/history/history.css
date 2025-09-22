@@ -58,6 +58,7 @@
 .document-card p {
   color: #666;
   line-height: 1.5;
+  height: 100px;
   margin: 0 0 1rem 0;
   display: -webkit-box;
   /* -webkit-line-clamp: 2; */

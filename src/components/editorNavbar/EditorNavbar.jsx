@@ -21,6 +21,7 @@ const EditorNavbar = ({ mdStr, title }) => {
 
   const handleSave = async () => {
     const currentDate = new Date();
+    const dateOnly = currentDate.toISOString().split("T")[0];
 
     // console.log(title);
     // console.log(currentDate);
@@ -28,7 +29,7 @@ const EditorNavbar = ({ mdStr, title }) => {
 
     const mdData = {
       title: title, // Use current title prop
-      date: currentDate,
+      date: dateOnly,
       mdData: mdStr, // Use current mdStr prop
     };
 

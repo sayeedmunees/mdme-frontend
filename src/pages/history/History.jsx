@@ -2,35 +2,18 @@ import React from "react";
 import "./history.css";
 import HistoryNavbar from "../../components/historyNavbar/HistoryNavbar";
 import { useState, useEffect } from "react";
+import { deleteMarkdownAPI, getMarkdownAPI } from "../../services/allAPI";
 
 const History = () => {
   const [documents, setDocuments] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Mock data - replace with localStorage
-  useEffect(() => {
-    const mockDocs = [
-      {
-        id: 1,
-        title: "My First Document",
-        preview: "This is my first markdown document...",
-        date: "2025-09-20",
-      },
-      {
-        id: 2,
-        title: "Project Notes",
-        preview: "Project setup and requirements...",
-        date: "2025-09-19",
-      },
-      {
-        id: 3,
-        title: "Meeting Summary",
-        preview: "Team meeting notes and action items...",
-        date: "2025-09-18",
-      },
-    ];
-    setDocuments(mockDocs);
-  }, []);
+  const getMarkDown = async () => {
+    const result = await getMarkdownAPI();
+    console.log(result);
+
+    setDocuments(result.data);
+  };
 
   const filteredDocs = documents.filter((doc) =>
     doc.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -41,11 +24,19 @@ const History = () => {
     // Navigate to editor
   };
 
-  const handleDelete = (id) => {
-    if (window.confirm("Delete this document?")) {
-      setDocuments((docs) => docs.filter((doc) => doc.id !== id));
+  const handleDelete = async (id) => {
+    try {
+      const result = await deleteMarkdownAPI(id);
+      console.log(result);
+      getMarkDown();
+    } catch (err) {
+      console.log("Error", err);
     }
   };
+
+  useEffect(() => {
+    getMarkDown();
+  }, []);
 
   return (
     <>
@@ -71,7 +62,7 @@ const History = () => {
             filteredDocs.map((doc) => (
               <div key={doc.id} className="document-card">
                 <h3>{doc.title}</h3>
-                <p>{doc.preview}</p>
+                <p>{doc.mdData}</p>
                 <div className="card-footer">
                   <span className="date">{doc.date}</span>
                   <div className="actions">
