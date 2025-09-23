@@ -1,0 +1,131 @@
+.page-not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  padding: 2rem;
+}
+
+.error-container {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+.error-code {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--color-logo);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.error-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+
+.error-message {
+  font-size: 1.3rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.countdown {
+  font-size: 1rem;
+  color: #888;
+  margin: 0 0 2rem 0;
+  font-style: italic;
+}
+
+.home-button {
+  padding: 0.75rem 2rem;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.home-button:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.home-button:active {
+  transform: translateY(0);
+}
+
+.countdown {
+  font-size: 1rem;
+  color: #888;
+  margin: 0 0 2rem 0;
+  font-style: italic;
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-not-found {
+    padding: 1rem;
+  }
+
+  .error-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .error-code {
+    font-size: 4rem;
+  }
+
+  .error-title {
+    font-size: 1.5rem;
+  }
+
+  .error-message {
+    font-size: 1rem;
+  }
+
+  .home-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .error-code {
+    font-size: 3rem;
+  }
+
+  .error-title {
+    font-size: 1.25rem;
+  }
+
+  .error-message {
+    font-size: 0.95rem;
+  }
+
+  .countdown {
+    font-size: 0.9rem;
+  }
+}
