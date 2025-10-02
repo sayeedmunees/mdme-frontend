@@ -1,4 +1,4 @@
-.page-not-found {
+.mdme__pageNotFound {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,14 +7,14 @@
   padding: 2rem;
 }
 
-.error-container {
+.mdme__pageNotFound-container {
   text-align: center;
   padding: 3rem 2rem;
   max-width: 500px;
   width: 100%;
 }
 
-.error-code {
+.mdme__pageNotFound-container_errorCode {
   font-size: 4rem;
   font-weight: 800;
   color: var(--color-logo);
@@ -22,28 +22,28 @@
   margin-bottom: 1rem;
 }
 
-.error-title {
+.mdme__pageNotFound-container_errorTitle {
   font-size: 2rem;
   font-weight: 600;
   color: #333;
   margin: 0 0 1rem 0;
 }
 
-.error-message {
+.mdme__pageNotFound-container_errorMessage {
   font-size: 1.3rem;
   color: #666;
   line-height: 1.6;
   margin: 0 0 1.5rem 0;
 }
 
-.countdown {
+.mdme__pageNotFound-container_countdown {
   font-size: 1rem;
   color: #888;
   margin: 0 0 2rem 0;
   font-style: italic;
 }
 
-.home-button {
+.mdme__pageNotFound-container_homeButton {
   padding: 0.75rem 2rem;
   background: #000;
   color: white;
@@ -55,16 +55,16 @@
   transition: all 0.2s ease;
 }
 
-.home-button:hover {
+.mdme__pageNotFound-container_homeButton:hover {
   background: #333;
   transform: translateY(-1px);
 }
 
-.home-button:active {
+.mdme__pageNotFound-container_homeButton:active {
   transform: translateY(0);
 }
 
-.countdown {
+.mdme__pageNotFound-container_countdown {
   font-size: 1rem;
   color: #888;
   margin: 0 0 2rem 0;
@@ -82,50 +82,50 @@
 }
 
 @media (max-width: 768px) {
-  .page-not-found {
+  .mdme__pageNotFound {
     padding: 1rem;
   }
 
-  .error-container {
+  .mdme__pageNotFound-container {
     padding: 2rem 1.5rem;
   }
 
-  .error-code {
+  .mdme__pageNotFound-container_errorCode {
     font-size: 4rem;
   }
 
-  .error-title {
+  .mdme__pageNotFound-container_errorTitle {
     font-size: 1.5rem;
   }
 
-  .error-message {
+  .mdme__pageNotFound-container_errorMessage {
     font-size: 1rem;
   }
 
-  .home-button {
+  .mdme__pageNotFound-container_homeButton {
     padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .error-container {
+  .mdme__pageNotFound-container {
     padding: 1.5rem 1rem;
   }
 
-  .error-code {
+  .mdme__pageNotFound-container_errorCode {
     font-size: 3rem;
   }
 
-  .error-title {
+  .mdme__pageNotFound-container_errorTitle {
     font-size: 1.25rem;
   }
 
-  .error-message {
+  .mdme__pageNotFound-container_errorMessage {
     font-size: 0.95rem;
   }
 
-  .countdown {
+  .mdme__pageNotFound-container_countdown {
     font-size: 0.9rem;
   }
 }

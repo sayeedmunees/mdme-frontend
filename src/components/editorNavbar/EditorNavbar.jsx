@@ -78,37 +78,48 @@ const EditorNavbar = ({
   };
 
   return (
-    <nav className="editor-navbar">
-      <div className="navbar-logo logo-text">
+    <nav className="editor__navbar">
+      <div className="editor__navbar-logo logo-text">
         <Link to="/">
           <h2>.mdme</h2>
         </Link>
       </div>
 
-      <div className="navbar-actions">
+      <div className="editor__navbar-actions">
         <Link to="/history">
           <span>History</span>
         </Link>
-
-        <button className="navbar-btn" onClick={handleCopy} disabled={!mdStr}>
-          <FaRegCopy /> Copy
-        </button>
-
-        {updateMd ? (
+        <>
           <button
-            className="navbar-btn"
-            onClick={handleUpdate}
-            // disabled={!mdStr || !mdId}
+            className="editor__navbar-actions_btn"
+            onClick={handleCopy}
+            disabled={!mdStr}
           >
-            <MdOutlineSystemUpdateAlt /> Update
+            <FaRegCopy /> Copy
           </button>
-        ) : (
-          <button className="navbar-btn" onClick={handleSave} disabled={!mdStr}>
-            <FiSave /> Save
-          </button>
-        )}
 
-        {copyStatus && <span className="status">{copyStatus}</span>}
+          {updateMd ? (
+            <button
+              className="editor__navbar-actions_btn"
+              onClick={handleUpdate}
+              // disabled={!mdStr || !mdId}
+            >
+              <MdOutlineSystemUpdateAlt /> Update
+            </button>
+          ) : (
+            <button
+              className="editor__navbar-actions_btn"
+              onClick={handleSave}
+              disabled={!mdStr}
+            >
+              <FiSave /> Save
+            </button>
+          )}
+
+          {copyStatus && (
+            <span className="editor__navbar-actions_status">{copyStatus}</span>
+          )}
+        </>
       </div>
     </nav>
   );

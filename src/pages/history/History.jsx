@@ -48,7 +48,6 @@ const History = ({ updateMd, setUpdateMd, historyEdit, setHistoryEdit }) => {
             content: response.data.mdData,
             id: response.data.id,
             date: response.data.date,
-            isEditing: true,
           },
         });
       }

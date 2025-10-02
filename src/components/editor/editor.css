@@ -105,3 +105,15 @@
     max-width: none;
   }
 }
+@media (max-width: 450px) {
+  .mdme__editor-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .title-input {
+    min-width: auto;
+    max-width: none;
+  }
+}

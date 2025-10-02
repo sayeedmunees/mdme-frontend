@@ -36,7 +36,7 @@ Start typing here to see the live preview!
 
   // Extract the document ID and editing flag
   const documentId = documentData?.id || null;
-  const isEditing = documentData?.isEditing || false;
+
 
   console.log("Received document ID:", documentId);
 
@@ -46,8 +46,6 @@ Start typing here to see the live preview!
       <EditorNavbar
         mdStr={mdStr}
         title={title}
-        documentId={documentId}
-        isEditing={isEditing}
         mdId={documentId}
         updateMd={updateMd}
         setUpdateMd={setUpdateMd}

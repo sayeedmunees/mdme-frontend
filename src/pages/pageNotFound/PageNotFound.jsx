@@ -25,17 +25,17 @@ const PageNotFound = () => {
   };
 
   return (
-    <div className="page-not-found">
-      <div className="error-container">
-        <div className="error-code">404</div>
-        <h1 className="error-title">Page Not Found</h1>
-        <p className="error-message">
+    <div className="mdme__pageNotFound">
+      <div className="mdme__pageNotFound-container">
+        <div className="mdme__pageNotFound-container_errorCode">404</div>
+        <h1 className="mdme__pageNotFound-container_errorTitle">Page Not Found</h1>
+        <p className="mdme__pageNotFound-container_errorMessage">
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <p className="countdown">
+        <p className="mdme__pageNotFound-container_countdown">
           Redirecting to home in {countdown} seconds...
         </p>
-        <button className="home-button" onClick={handleGoHome}>
+        <button className="mdme__pageNotFound-container_homeButton" onClick={handleGoHome}>
           Go Back to Home Now
         </button>
       </div>
