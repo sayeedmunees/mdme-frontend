@@ -33,6 +33,25 @@ const Footer = () => {
       </div>
       <div className="mdme__footer-copyright">
         <p>© 2025 mdme. All rights reserved.</p>
+        <p style={{ paddingTop: "2rem", fontSize: "1rem" }}>
+          View Source Code on
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://github.com/sayeedmunees/mdme-frontend"
+          >
+            <span
+              style={{
+                paddingLeft: "0.5rem",
+                textDecoration: "underline",
+                textUnderlineOffset: "0.3rem",
+                color: "rgba(145, 180, 255, 1)",
+              }}
+            >
+              GitHub &#8599;
+            </span>
+          </a>
+        </p>
       </div>
     </div>
   );
