@@ -322,4 +322,4 @@ If you find MDME useful, please consider:
 
 ---
 
-**Ready to make markdown easy? [Start editing now →](https://mdme.vercel.app/editor)**
+**Ready to make markdown easy? [Start editing now →](https://mdme.vercel.app)**
