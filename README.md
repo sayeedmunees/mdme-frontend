@@ -191,7 +191,6 @@ We welcome contributions from developers of all skill levels! MDME is completely
 5. **Enhanced Editor**: Add more markdown editing features (tables, math equations)
 6. **Export Options**: PDF, HTML, and other format exports
 7. **Themes**: Dark/light mode and custom themes
-8. **Mobile App**: React Native or Flutter mobile application
 
 ### Getting Started with Contributions
 
