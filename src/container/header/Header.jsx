@@ -11,7 +11,10 @@ const Header = () => {
         <div className="mdme__header-heading">
           <h4>Once you try,</h4>
           <h1>
-            It's addictive like <br /> mdma, but it's <span>mdme</span>.
+            <span>.mdme</span>
+          </h1>
+          <h1 id="mdme__header-heading_h1">
+            there's no going back <br /> — and why would you?"
           </h1>
           <h2>
             <span>M</span>ark <span>D</span>own <span>M</span>ade <span>E</span>
